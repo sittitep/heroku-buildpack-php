@@ -112,7 +112,7 @@ To compile after making updates, do the following:
     --with-iconv --with-gd --with-curl=/usr/lib                         \
     --with-config-file-path=/app/php --enable-soap=shared               \
     --with-openssl --with-mcrypt=/app/vendor/mcrypt --enable-sockets    \
-    --enable-zip
+    --enable-zip \
 	--enable-mbstring
     make -s
     make install -s
