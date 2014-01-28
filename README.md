@@ -66,7 +66,7 @@ can be downloaded by the build pack (see the URIs in `compile`).
     # Download Apache if necessary.
     if [ ! -f $httpd_archive_name ]
     then
-        curl -LO ftp://ftp.osuosl.org/pub/apache//httpd/$httpd_archive_name
+        curl -LO http://mirrors.axint.net/apache/httpd/$httpd_archive_name
     fi
 
     # Clean and extract Apache.
