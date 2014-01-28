@@ -21,6 +21,16 @@ running it, `/app` will contain, among other entities,
 `mcrypt-2.5.8-1.tar.gz` which should be uploaded to a location that
 can be downloaded by the build pack (see the URIs in `compile`).
 
+To compile after making updates, do the following:
+* clone the repo of our heroku app used for building build pack dependencies: git@heroku.com:temporary-php-builder.git
+* copy/paste the script below over build_php.sh within that repository
+* git push to deploy the updated script
+* heroku run bash --app temporary-php-builder
+* cd www
+* chmod 775 ./build_php.sh
+* ./build_php
+* sftp iron@thirdiron.com and put the files on our server for easy upload to S3
+
     #!/bin/bash
     set -uex
     cd /tmp
